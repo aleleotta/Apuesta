@@ -68,7 +68,7 @@ public class Apuesta {
     /**
      * Metodo para apostar.
      * Permite elegir la cantidad a apostar, no pudiendo ser inferior a 1 ni superior a tu saldo disponible.
-     * @param dinero 
+     * @param dinero Cantidad de dinero
      * @throws Exception Previene un error.
      */
     public void apostar(int dinero) throws Exception {
