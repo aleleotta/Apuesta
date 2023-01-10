@@ -23,11 +23,10 @@ public class Apuesta {
 	 */
     private int apostado;
 
-    /*Constructor por defecto*/
     /**
      * Constructor Apuesta por defecto
      */
-    public Apuesta() {
+    public Apuesta() { //Constructor por defecto.
     }
 
     /*Contructor con parametros*/
@@ -63,11 +62,11 @@ public class Apuesta {
     }
 
     /* Metodo para apostar.
-     * Permite elegir la cantidad a apostar, no pudiendo ser inferior a 1 ni superior a tu saldo disponible.
+     * Permite elegir la cantidad a apostar.
      */
     /**
      * Metodo para apostar.
-     * Permite elegir la cantidad a apostar, no pudiendo ser inferior a 1 ni superior a tu saldo disponible.
+     * Permite elegir la cantidad a apostar.
      * @param dinero Cantidad de dinero
      * @throws Exception Previene un error.
      */
