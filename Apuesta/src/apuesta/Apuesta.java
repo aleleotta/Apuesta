@@ -85,11 +85,10 @@ public class Apuesta {
     }
     
     /* Metodo que comprueba si se ha acertado el resultado del partido.
-     * En caso de que lo haya acertado devuelve true. Chequea que no se metan menos de 0 goles.
      */
     /**
      * Metodo que comprueba si se ha acertado el resultado del partido.
-     * En caso de que lo haya acertado devuelve true. Chequea que no se metan menos de 0 goles.
+     * 
      * @param local Equipo local
      * @param visitante Equipo visitante
      * @return Devuelve el valor boolean por si se ha acertado la comprobación.
@@ -97,7 +96,7 @@ public class Apuesta {
      */
     public boolean comprobar_resultado(int local, int visitante) throws Exception {
         boolean acertado = false;
-        if ((local < 0) || (visitante) < 0) {
+        if (local < 0 || visitante < 0) {
             throw new Exception("Un equipo no puede meter menos de 0 goles, por malo que sea");
         }
 
@@ -108,17 +107,15 @@ public class Apuesta {
     }
     
     /* Metodo para cobrar la apuesta.
-     * Comprueba que se acertó el resultado y, en ese caso, añade el valor apostado multiplicado por 10 al saldo disponible.
      */
     /**
      * Metodo para cobrar la apuesta.
-     * Comprueba que se acertó el resultado y, en ese caso, añade el valor apostado multiplicado por 10 al saldo disponible.
-     * @param cantidad_goles_local La cantidad de goles del equipo local.
-     * @param cantidad_goles_visit La cantidad de goles del equipo visitante.
+     * @param cantGolesLocal La cantidad de goles del equipo local.
+     * @param cantGolesVisit La cantidad de goles del equipo visitante.
      * @throws Exception Previene un error.
      */
-    void cobrar_apuesta(int cantidad_goles_local, int cantidad_goles_visit) throws Exception {
-        if (comprobar_resultado(cantidad_goles_local, cantidad_goles_visit) == false) {
+    void cobrar_apuesta(int cantGolesLocal, int cantGolesVisit) throws Exception {
+        if (!comprobar_resultado(cantGolesLocal, cantGolesVisit)) {
             throw new Exception("No se puede cobrar una apuesta no acertada");
         }
         dinero_disp = dinero_disp * 10;
